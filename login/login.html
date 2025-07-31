@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hive Login</title>
+    <link rel="icon" href="assets/iwteyp.png" type="image/png" />
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="background">
+        <video autoplay muted loop id="bg-video">
+            <source src="https://youtu.be/uaVdJSwL8wo?si=7l7bIq3SuDKe-6u3" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="login-container">
+            <form onsubmit="return data()" action="home.html">
+                <h2>🐝Hive Login</h2>
+                <div>
+                    <b>User:</b>
+                    <input type="text" id="n1" placeholder="Enter Username">
+                </div>
+                <div>
+                    <b>Contact:</b>
+                    <input type="text" id="n2" placeholder="Enter Contact">
+                </div>
+                <div>
+                    <b>Password:</b>
+                    <input type="password" id="n3" placeholder="Enter Password">
+                </div>
+                <div>
+                    <b>Confirm Password:</b>
+                    <input type="password" id="n4" placeholder="Confirm Password">
+                </div>
+                <input type="submit" id="n5" value="Login">
+                <p class="register-link">
+                    Don't have an account? <a href="register.html">Register</a>
+                </p>
+
+            </form>
+
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+
+</html>
