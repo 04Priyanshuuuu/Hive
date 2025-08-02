@@ -1,0 +1,106 @@
+/* Club Header */
+.club-header {
+    text-align: center;
+    margin: 40px 0 20px;
+}
+
+.club-header h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.join-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.join-btn:hover {
+    background-color: #ffdb4d;
+}
+
+/* Club Info Section */
+.club-info {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    padding: 20px;
+    background: #f7f7f7;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.club-info h3 {
+    font-size: 1.8rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.club-info p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Slider Headings */
+.head {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 40px 0 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Slider */
+.slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 0 20px 40px;
+    scroll-behavior: smooth;
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 180px;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    position: relative;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card .number {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+    padding: 6px 10px;
+    border-radius: 50%;
+    font-weight: bold;
+}

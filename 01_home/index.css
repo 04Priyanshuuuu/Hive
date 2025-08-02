@@ -478,6 +478,9 @@ body {
 
 .gallery-section {
     padding: 40px 20px;
+    border-bottom: 2px solid aliceblue;
+    border-top: 2px solid aliceblue;
+}
 }
 
 .gallery-container {
@@ -488,17 +491,21 @@ body {
     gap: 40px;
     align-items: start;
     flex-wrap: wrap;
+
 }
 
 .gallery-text h4 {
     color: #ff2f92;
     text-transform: uppercase;
     margin-bottom: 10px;
+    margin-left: 530px;
+    font-size: 60px;
 }
 
 .gallery-text h2 {
-    font-size: 36px;
+    font-size: 56px;
     margin-bottom: 20px;
+    margin-left: 500px;
 }
 
 .gallery-text .outline-text {
@@ -521,12 +528,13 @@ body {
 .gallery-images {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 10px;
 }
 
 .gallery-images img {
     width: 100%;
-    height: auto;
+    height: 400px;
+    width: 700px;
     border-radius: 8px;
     display: block;
 }

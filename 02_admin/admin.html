@@ -2,50 +2,270 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Club Admin Dashboard</title>
-    <link rel="stylesheet" href="admin.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profile with Sidebar and Profile Card</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: #f5f5f5;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Fixed Sidebar */
+        .leftBlock_92x {
+            width: 250px;
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-right: 1px solid #333;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .leftBlock_92x h2 {
+            font-size: 20px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            color: #00ffe1;
+            margin-top: 10px;
+        }
+
+        .leftBlock_92x ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 20px;
+        }
+
+        .leftBlock_92x li {
+            margin-bottom: 20px;
+            color: #ddd;
+        }
+
+        /* Main area */
+        .mainZone_k4p {
+            margin-left: 250px;
+            flex: 1;
+            padding: 30px;
+        }
+
+        .profileCard_p1k {
+            height: 400px;
+            background: #1e1e1e;
+            border-radius: 12px;
+            /* padding: 5px; */
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .profileInfo {
+            flex: 1;
+        }
+
+        .profileInfo h2 {
+            color: #00ffe1;
+            font-size: 24px;
+        }
+
+        .profileInfo p {
+            color: #ccc;
+            margin-top: 5px;
+        }
+
+        .profileImage {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid transparent;
+            margin-top: 75px;
+            margin-left: 5%;
+        }
+
+        .profileImage img {
+
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gridWrap_3tq {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .blockUnit_d8r {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.2s;
+        }
+
+        .blockUnit_d8r:hover {
+            transform: translateY(-5px);
+        }
+
+        .blockUnit_d8r h2 {
+            color: #00ffe1;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .blockUnit_d8r ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .blockUnit_d8r li {
+            color: #ddd;
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .leftBlock_92x {
+                position: static;
+                width: 100%;
+                height: auto;
+                border-right: none;
+                border-bottom: 1px solid #333;
+            }
+
+            .mainZone_k4p {
+                margin-left: 0;
+                padding: 20px;
+            }
+
+            .profileCard_p1k {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+
+            .profileImage {
+                margin-top: 10px;
+            }
+
+            /* .bcgrnd{
+        height: 100%;
+        background-color: #00ffe1;
+        width: 100%;
+      } */
+        }
+    </style>
 </head>
 
 <body>
-    <div class="dashboard">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <div class="admin-info">
-                <h3>Admin Dashboard</h3>
-                <p>Name</p>
-                <p>Branch</p>
-                <p>Roll No</p>
-            </div>
-            <nav class="nav">
-                <a href="#" class="nav-item">Dashboard</a>
-                <a href="#" class="nav-item">Members</a>
-                <a href="#" class="nav-item">Host Event</a>
-                <a href="#" class="nav-item">Payments</a>
-            </nav>
-            <div class="settings">
-                <a href="#">Settings</a>
-            </div>
-        </aside>
 
-        <!-- Main Content -->
-        <main class="main-content">
-            <header class="header">
-                <div class="logo">LOGO</div>
-                <h1>Club ka Naam</h1>
-            </header>
+    <!-- Sidebar -->
+    <div class="leftBlock_92x">
+        <h2> Profile</h2>
+        <ul>
+            <li><b>Name : Harshit Pandey</b></li>
+            <li><b>Roll No. : 2024071130</b></li>
+            <li><b>Roll No. : 2024071130</b></li>
 
-            <section class="overview">
-                <h2>Overview</h2>
-                <div class="cards">
-                    <div class="card">Total Members</div>
-                    <div class="card">Registered</div>
-                    <div class="card">Upcoming</div>
-                </div>
-            </section>
-        </main>
+        </ul>
+        </br>
+        </br>
+        </br>
+        </br>
+        <hr>
+        <ul>
+            <li><a href="#"><b>DASHBOARD</b></a></li>
+            </br>
+            </br>
+            </hr>
+
+            <li><a href="#"><b>MEMBER</b></a></li>
+            </br>
+            </br>
+            <li><a href="/07_eventannounce/eann.html"><b>HOST EVENT</b></a></li>
+            </br>
+            </br>
+            <li><a href="#"><b>PAYMENTS</b></a></li>
+        </ul>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        <b>Settings</b>
     </div>
+
+    <!-- Main Section -->
+    <div class="mainZone_k4p">
+
+        <!-- Profile Card -->
+        <div class="profileCard_p1k">
+            <div class="bcgrnd"
+                style=" border: 0px solid transparent; background-image: url('../assets/download2.jpg') ; width: 100%; height: 100%; border-radius: 5px; background-position: center; background-size: cover; background-repeat: no-repeat;">
+                <div class="profileImage">
+                    <img class="imgcont" src="https://i.pravatar.cc/150?img=3" alt="Profile Photo">
+                    <div class="namecontainer">
+                        <h1>CLUB OF KINGS</h1>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Other Cards -->
+        <div class="gridWrap_3tq">
+
+            <div class="blockUnit_d8r">
+                <h2>👥 Connections</h2>
+                <ul>
+                    <li>Ravi Sharma</li>
+                    <li>Anjali Verma</li>
+                    <li>Neha Joshi</li>
+                    <li>Aryan Mehta</li>
+                </ul>
+            </div>
+
+            <div class="blockUnit_d8r">
+                <h2>🏆 Awards</h2>
+                <ul>
+                    <li>Best Coder - TechFest 2024</li>
+                    <li>Top Performer - Hackathon 2023</li>
+                    <li>Leadership Award - Club Alpha</li>
+                </ul>
+            </div>
+
+            <div class="blockUnit_d8r">
+                <h2>🎯 Clubs</h2>
+                <ul>
+                    <li>Code Warriors</li>
+                    <li>Design Minds</li>
+                    <li>Robotics Club</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
 </body>
 
 </html>
