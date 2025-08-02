@@ -1,122 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Forgot Password with OTP</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-       background-image: url('login2img.webp');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-      transition: background-color 0.3s;
-    }
-
-    .container {
-      width: 360px;
-      margin: 6% auto;
-      padding: 30px;
-      background-color:  rgba(253, 246, 227, 0.6);
-      border-radius: 10px;
-      box-shadow: 0px 0px 10px #000;
-      position: relative;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    label {
-      font-weight: bold;
-      display: block;
-      margin-top: 10px;
-    }
-
-    input[type="email"],
-    input[type="password"],
-    input[type="text"] {
-      width: 100%;
-      padding: 10px;
-      margin: 6px 0;
-      background-color: white;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-
-    .error {
-      color: red;
-      font-size: 13px;
-      margin-top: -8px;
-      margin-bottom: 8px;
-    }
-
-    .btn,
-    .send-otp-btn,
-    .resend-btn {
-      width: 100%;
-      padding: 10px;
-      margin-top: 25px;
-      background-color: black;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .btn:hover,
-    .send-otp-btn:hover,
-    .resend-btn:hover {
-      background-color: #1e7f1f;
-    }
-
-    .toggle-mode {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      font-size: 14px;
-      cursor: pointer;
-    }
-
-    #timer {
-      text-align: center;
-      color: #555;
-      font-size: 14px;
-      margin-top: 5px;
-    }
-
-    body.dark-mode {
-      background-color: #222;
-      color: white;
-    }
-
-    body.dark-mode .container {
-      background-color: #333;
-      color: white;
-    }
-
-    body.dark-mode input {
-      background-color: #222;
-      color: rgb(44, 36, 36);
-      border-color: white;
-    }
-
-    body.dark-mode .btn,
-    body.dark-mode .send-otp-btn,
-    body.dark-mode .resend-btn {
-      background-color: #555;
-    }
-
-    body.dark-mode .btn:hover,
-    body.dark-mode .send-otp-btn:hover,
-    body.dark-mode .resend-btn:hover {
-      background-color: #1e7f1f;
-    }
-  </style>
+  <link rel="stylesheet" href="fp.css" />
 </head>
+
 <body>
 
   <div class="container">
@@ -131,7 +20,8 @@
       <!-- Send OTP -->
       <button type="button" class="send-otp-btn" onclick="sendOTP()" id="sendBtn">Send OTP</button>
       <p id="timer"></p>
-      <button type="button" class="resend-btn" onclick="sendOTP()" style="display:none;" id="resendBtn">🔁 Resend OTP</button>
+      <button type="button" class="resend-btn" onclick="sendOTP()" style="display:none;" id="resendBtn">🔁 Resend
+        OTP</button>
 
       <!-- Step 2: OTP -->
       <label for="otp">Enter OTP:</label>
@@ -260,4 +150,5 @@
   </script>
 
 </body>
+
 </html>

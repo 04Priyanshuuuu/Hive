@@ -1,28 +1,38 @@
-function data() {
-    var a = document.getElementById("n1").value;
-    var b = document.getElementById("n2").value;
-    var c = document.getElementById("n3").value;
-    var d = document.getElementById("n4").value;
-    var e = document.getElementById("n5").value;
+function validator() {
+    var email = document.getElementById("n1").value.trim();
+    var password = document.getElementById("n2").value.trim();
+    var userError = document.getElementById("userError");
+    var passError = document.getElementById("passError");
+    let valid = true;
+
+    // Clear previous messages
+    userError.textContent = "";
+    passError.textContent = "";
+
+    // Email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        userError.textContent = "Enter a valid email address.";
+        valid = false;
+    }
+
+    // Password must be numeric and at least 6 digits
+    if (!/^\d+$/.test(password)) {
+        passError.textContent = "Password must contain only numbers.";
+        valid = false;
+    } else if (password.length < 6) {
+        passError.textContent = "Password must be at least 6 digits.";
+        valid = false;
+    }
 
 
-    if (a == "" || b == "" || c == "" || d == "") {
-        alert("All fields are mandatory!!");
-        return false;
+    if (valid) {
+        alert("Login successful!");
     }
-    else if (b.length > 10 || b.length < 10) {
-        alert("Number should be of 10 digits!!Please enter a valid number");
-        return false;
-    }
-    else if (isNaN(b)) {
-        alert("Only numbers allowed!!Please enter a valid number");
-        return false;
-    }
-    else if (c != d) {
-        alert("Please enter same password!!");
-        return false;
-    }
-    else {
-        true;
-    }
+    return valid;
+}
+
+// 🌙 Toggle Dark Mode
+function toggleMode() {
+    document.body.classList.toggle("dark-mode");
 }

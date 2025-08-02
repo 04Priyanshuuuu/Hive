@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Hive Sign Up </title>
+  <link rel="stylesheet" href="signup.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="toggle-mode" onclick="toggleMode()">🌙 Dark Mode</div>
+    <h2><u>Sign Up</u></h2>
+    <form onsubmit="return validateForm()">
+      <label for="firstname">Username:</label>
+      <input type="text" id="n1" name="firstname" placeholder="Enter username">
+      <div class="error" id="usernameError"></div>
+
+      <label for="email">Email:</label>
+      <input type="email" id="n2" name="email" placeholder="Enter email address">
+      <div class="error" id="emailError"></div>
+
+      <label for="password">Password:</label>
+      <input type="password" id="n3" name="password" placeholder="Only numbers, min 6 chars">
+      <div class="error" id="passwordError"></div>
+
+      <label for="confirm-password">Confirm Password:</label>
+      <input type="password" id="n4" name="confirm-password" placeholder="Confirm your password">
+      <div class="error" id="confirmError"></div>
+
+      <input type="submit" value="Sign Up">
+    </form>
+  </div>
+
+  <script src="signup.js">  </script>
+</body>
+
+</html>
