@@ -13,10 +13,12 @@ body {
   min-height: 100vh;
 }
 
-.site-header, .site-footer {
-  padding: 20px;
-  text-align: center;
-  background-color: #111;
+
+
+.noti-head {
+  display: flex;
+  margin-top: 80px;
+  margin-left: 150px;
 }
 
 .notifications-container {
@@ -66,16 +68,19 @@ body {
   z-index: -1;
   border-radius: 28px;
   animation: rotateRGB 6s linear infinite;
-  filter: blur(10px); /* glow outside the card */
+  filter: blur(10px);
+  /* glow outside the card */
 }
 
 @keyframes rotateRGB {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
