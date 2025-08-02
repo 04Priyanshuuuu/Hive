@@ -4,6 +4,10 @@
 <head>
   <title>Hive Sign Up </title>
   <link rel="stylesheet" href="signup.css" />
+  <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore.js"></script>
+
 </head>
 
 <body>
@@ -11,27 +15,44 @@
     <div class="toggle-mode" onclick="toggleMode()">🌙 Dark Mode</div>
     <h2><u>Sign Up</u></h2>
     <form onsubmit="return validateForm()">
-      <label for="firstname">Username:</label>
-      <input type="text" id="n1" name="firstname" placeholder="Enter username">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" placeholder="Enter username">
       <div class="error" id="usernameError"></div>
 
+      <label for="rollno">Roll No:</label>
+      <input type="text" id="rollno" name="rollno" placeholder="Enter roll number">
+      <div class="error" id="rollnoError"></div>
+
+      <label for="branch">Branch:</label>
+      <input type="text" id="branch" name="branch" placeholder="Enter branch">
+      <div class="error" id="branchError"></div>
+
       <label for="email">Email:</label>
-      <input type="email" id="n2" name="email" placeholder="Enter email address">
+      <input type="email" id="email" name="email" placeholder="Enter email address">
       <div class="error" id="emailError"></div>
 
       <label for="password">Password:</label>
-      <input type="password" id="n3" name="password" placeholder="Only numbers, min 6 chars">
+      <input type="password" id="password" name="password" placeholder="Only numbers, min 6 chars">
       <div class="error" id="passwordError"></div>
 
-      <label for="confirm-password">Confirm Password:</label>
-      <input type="password" id="n4" name="confirm-password" placeholder="Confirm your password">
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password">
       <div class="error" id="confirmError"></div>
 
       <input type="submit" value="Sign Up">
     </form>
   </div>
 
-  <script src="signup.js">  </script>
+
+  <div id="error-popup" class="popup">
+    <div class="popup-content">
+      <p>Email already exists.</p>
+      <a href="login.html" class="login-link">Already have an account? Login here</a>
+      <button onclick="document.getElementById('error-popup').style.display='none'">Close</button>
+    </div>
+  </div>
+
+  <script type="module" src="signup.js">  </script>
 </body>
 
 </html>
