@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('imglogin.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            transition: background-color 0.3s;
+        }
+
+        .login-container {
+            background-color: rgba(173, 216, 230, 0.95);
+            padding: 20px 40px 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            max-width: 320px;
+            width: 100%;
+            position: relative;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .btn {
+            background-color: #080808;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 5px;
+            padding: 10px;
+            width: 100%;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #1e7f1f;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .error {
+            color: red;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .forgot-password,
+        .signup {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .forgot-password a,
+        .signup a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .forgot-password a:hover,
+        .signup a:hover {
+            text-decoration: underline;
+        }
+
+        .toggle-mode {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* Dark Mode Styling */
+        body.dark-mode {
+            background-color: #222;
+            color: white;
+        }
+
+        body.dark-mode .login-container {
+            background-color: rgba(40, 40, 40, 0.95);
+            color: white;
+        }
+
+        body.dark-mode .btn {
+            background-color: #444;
+        }
+
+        body.dark-mode .btn:hover {
+            background-color: #1e7f1f;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="toggle-mode" onclick="toggleMode()">🌙 Dark Mode</div>
+        <h2><u>Login</u></h2>
+        <form name="myform" onsubmit="return validator()">
+            <label for="username">UserEmail:</label>
+            <input type="text" id="n1" name="username" placeholder="Enter email address">
+            <div class="error" id="userError"></div>
+
+            <label for="password">Password:</label>
+            <input type="password" id="n2" name="password" placeholder="Only numbers, min 6 chars">
+            <div class="error" id="passError"></div>
+
+            <button class="btn" type="submit">Login</button>
+
+            <div class="forgot-password">
+                <a href="forgetPass.html" target="_blank">Forget Password?</a>
+            </div>
+
+            <div class="signup">
+                <p>Don't have an account? <a href="sign2.html" target="_blank">Sign up</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function validator() {
+            var email = document.getElementById("n1").value.trim();
+            var password = document.getElementById("n2").value.trim();
+            var userError = document.getElementById("userError");
+            var passError = document.getElementById("passError");
+            let valid = true;
+
+            // Clear previous messages
+            userError.textContent = "";
+            passError.textContent = "";
+
+            // Email validation
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                userError.textContent = "Enter a valid email address.";
+                valid = false;
+            }
+
+            // Password must be numeric and at least 6 digits
+            if (!/^\d+$/.test(password)) {
+                passError.textContent = "Password must contain only numbers.";
+                valid = false;
+            } else if (password.length < 6) {
+                passError.textContent = "Password must be at least 6 digits.";
+                valid = false;
+            }
+
+            
+            if (valid) {
+                alert("Login successful!");
+            }
+            return valid;
+        }
+
+        // 🌙 Toggle Dark Mode
+        function toggleMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+
+</body>
+</html>

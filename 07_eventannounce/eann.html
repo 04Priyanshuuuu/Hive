@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Announce Event</title>
+    <link rel="stylesheet" href="eann.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Event Announcement</h1>
+        <form>
+            <label for="event-name">Name of Event</label>
+            <input type="text" id="event-name" placeholder="e.g., Techown (list of programs)" required />
+
+            <label for="event-date">Date</label>
+            <input type="date" id="event-date" required />
+
+            <label for="event-time">Timing</label>
+            <input type="time" id="event-time" required />
+
+            <label for="description">Description</label>
+            <textarea id="description" rows="3" placeholder="Enter event details..."></textarea>
+
+            <label for="price">Price (if there)</label>
+            <input type="text" id="price" placeholder="Free or ₹100 etc." />
+
+            <button type="submit" class="announce-btn">Announce</button>
+        </form>
+    </div>
+</body>
+
+</html>
