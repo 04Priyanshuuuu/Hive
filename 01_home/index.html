@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HIVE</title>
     <link rel="icon" href="assets/iwteyp.png" type="image/png" />
-    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore.js"></script>
+
 </head>
 
 <body>
     <div class="main">
         <div class="navbar">
-            <h1>🐝HIVE</h1>
+            <h1>HIVE</h1>
             <ul class="nav-links">
                 <li><a href="home.html">Home</a></li>
                 <li class="dropdown">
@@ -25,9 +29,9 @@
                     </ul>
                 </li>
 
-                <li><a href="#genres">Events</a></li>
-                <li><a href="#amv">Notifications</a></li>
-                <li><a href="#profile">Profile</a></li>
+                <li><a href="/05_events/event.html">Events</a></li>
+                <li><a href="/09">Notifications</a></li>
+                <li><a href="/06_profile/profile.html">Profile</a></li>
             </ul>
 
             <div class="controls">
@@ -62,37 +66,36 @@
         </div>
 
         <div class="events-grid">
-            <div class="event-card large" style="background-image: url('assets\a.png');">
+            <div class="event-card large" style="background-image: url('/assets/a.png');">
                 <div class="event-info">
                     <p class="date">April 01, 2025</p>
                     <h3>Abhyudaya</h3>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p class="description">
+                        Cultural Fest of MMMUT, Gorakhpur
+                        A vivacious amalgamation of art, literature and culture!</p>
                     <a href="#" class="ticket-link">Get Tickets →</a>
                 </div>
             </div>
 
-            <div class="event-card small"
-                style="background-image: url('https://cdn.prod.website-files.com/636278d56e61002000539cc6/639207e28940b48ade4434cc_image-3-events-club-template.jpg');">
+            <div class="event-card small" style="background-image: url('');">
                 <div class="event-info">
-                    <p class="date">Aug 24, 2023</p>
-                    <h4>Neon Nights</h4>
+                    <p class="date">April 25, 2025</p>
+                    <h4>Technokratos</h4>
                     <a href="#" class="ticket-link">Get Tickets →</a>
                 </div>
             </div>
 
-            <div class="event-card small"
-                style="background-image: url('https://cdn.prod.website-files.com/636278d56e61002000539cc6/639207896f4e05525271ddb9_image-2-events-club-template.jpg');">
+            <div class="event-card small" style="background-image: url('');">
                 <div class="event-info">
-                    <p class="date">Jul 22, 2023</p>
-                    <h4>DJ Paul Freedman</h4>
+                    <p class="date">Aug 2, 2025</p>
+                    <h4>ByteBrust</h4>
                     <a href="#" class="ticket-link">Get Tickets →</a>
                 </div>
             </div>
         </div>
 
         <div class="browse-button">
-            <a href="#" class="btn">Browse All Events</a>
+            <a href="/05_events/event.html" class="btn">Browse All Events</a>
         </div>
     </section>
 
@@ -300,18 +303,7 @@
     <script src="script.js"></script>
 
 
-    <script>
-        const profilePic = document.getElementById('profilePic');
-        const profileMenu = document.getElementById('profileMenu');
-        profilePic.addEventListener('click', function (e) {
-            profileMenu.style.display = profileMenu.style.display === 'block' ? 'none' : 'block';
-        });
-        document.addEventListener('click', function (e) {
-            if (!profilePic.contains(e.target) && !profileMenu.contains(e.target)) {
-                profileMenu.style.display = 'none';
-            }
-        });
-    </script>
+
     </div>
 </body>
 
