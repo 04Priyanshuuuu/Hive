@@ -11,33 +11,51 @@
 
 <body>
   <!-- Navbar/Header -->
-  <header class="site-header">
+  <header>
     <div class="navbar">
-      <h1>🐝HIVE</h1>
+      <h1>HIVE</h1>
       <ul class="nav-links">
-        <li><a href="home.html">Home</a></li>
+        <li><a href="/01_home/index.html">Home</a></li>
         <li class="dropdown">
-          <a href="#">Clubs</a>
+          <a href="/10_clubs/club.html">Clubs</a>
           <ul class="dropdown-menu">
-            <li><a href="cdc.html">CDC (Coders & Developers Club)</a></li>
+            <li><a href="/10_clubs/cdc.html">CDC (Coders & Developers Club)</a></li>
             <li><a href="gdg.html">GDG (Google Developers Group)</a></li>
             <li><a href="drone.html">Drone & IoT Club</a></li>
             <li><a href="ecell.html">E-Cell (Entrepreneurship Club)</a></li>
           </ul>
         </li>
 
-        <li><a href="#genres">Events</a></li>
-        <li><a href="#amv">Notifications</a></li>
-        <li><a href="#profile">Profile</a></li>
+        <li><a href="/05_events/event.html">Events</a></li>
+        <li><a href="/09">Notifications</a></li>
+        <li><a href="/06_profile/profile.html">Profile</a></li>
       </ul>
 
-      <div class="controls">
-        <input type="text" placeholder="Search ..." class="search-bar" />
-        <button id="dark-mode-toggle">🌙</button>
+      <div class="profile">
+        <div class="controls">
+          <input type="text" placeholder="Search ..." class="search-bar" />
+
+          <button id="search-bar">🔍</button>
+        </div>
+
+
+        <button id="dark-mode">🌙</button>
+        <img src="/assets/user.jpg" alt="Profile" id="profilePic" />
+        <div id="profileMenu" class="profile-menu">
+          <ul>
+            <li><a href="/06_profile/profile.html">View Profile</a></li>
+            <li><a href="/03_login/login.html">Login</a></li>
+            <li><a href="/03_login/signup.html">SignUp</a></li>
+            <li><a href="/03_login/login.html">Logout</a></li>
+            <li><a href="/08_about/about.html">About Us</a></li>
+            <li><a href="#">Settings</a></li>
+          </ul>
+        </div>
       </div>
 
 
-              
+
+
     </div>
   </header>
 
@@ -75,8 +93,8 @@
   </a>
   <a href="/event/dj-dominique" class="event-banner">
     <div class="event-banner-content">
-      <div class="event-date">Aug 25, 2023</div>
-      <h2 class="event-title">DJ Dominique</h2>
+      <div class="event-date">April 25, 2025</div>
+      <h2 class="event-title">Technokratos</h2>
       <div class="event-description">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.
@@ -88,8 +106,8 @@
   </a>
   <a href="/event/dj-dominique" class="event-banner">
     <div class="event-banner-content">
-      <div class="event-date">Aug 25, 2023</div>
-      <h2 class="event-title">DJ Dominique</h2>
+      <div class="event-date">Jan 12, 2025</div>
+      <h2 class="event-title">Heats</h2>
       <div class="event-description">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.
@@ -174,7 +192,8 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="/01_home/index.js"></script>
+
 </body>
 
 </html>

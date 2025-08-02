@@ -4,25 +4,7 @@ body {
   background: #000;
 }
 
-/* .site-header {  width:100%; background: rgba(0,0,0,0.7);  margin: 0px; } */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: auto;
-}
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-}
 
 /* Hero */
 .hero {
