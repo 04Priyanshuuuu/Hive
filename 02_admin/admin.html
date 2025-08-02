@@ -66,7 +66,7 @@
             /* padding: 5px; */
             margin-bottom: 30px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
@@ -137,6 +137,21 @@
             margin-bottom: 8px;
         }
 
+        .event-link {
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .event-link:hover {
+            color: aqua;
+        }
+
+
+
+
         @media (max-width: 768px) {
             body {
                 flex-direction: column;
@@ -179,7 +194,10 @@
 
     <!-- Sidebar -->
     <div class="leftBlock_92x">
-        <h2> Profile</h2>
+        </br>
+        </br>
+
+        <h2> ADMIN DASHBOARD</h2>
         <ul>
             <li><b>Name : Harshit Pandey</b></li>
             <li><b>Roll No. : 2024071130</b></li>
@@ -192,18 +210,18 @@
         </br>
         <hr>
         <ul>
-            <li><a href="#"><b>DASHBOARD</b></a></li>
+            <li><a href="#" class="event-link"><b>DASHBOARD</b></a></li>
             </br>
             </br>
             </hr>
 
-            <li><a href="#"><b>MEMBER</b></a></li>
+            <li><a href="#" class="event-link"><b>MEMBER</b></a></li>
             </br>
             </br>
-            <li><a href="/07_eventannounce/eann.html"><b>HOST EVENT</b></a></li>
+            <li><a href="/07_eventannounce/eann.html" class="event-link"><b>HOST EVENT</b></a></li>
             </br>
             </br>
-            <li><a href="#"><b>PAYMENTS</b></a></li>
+            <li><a href="#" class="event-link"><b>PAYMENTS</b></a></li>
         </ul>
         </br>
         </br>
@@ -218,25 +236,25 @@
     <div class="mainZone_k4p">
 
         <!-- Profile Card -->
-        <div class="profileCard_p1k">
+        <div class="profileCard_p1k" style="display: flex; flex-direction: column; ">
             <div class="bcgrnd"
-                style=" border: 0px solid transparent; background-image: url('../assets/download2.jpg') ; width: 100%; height: 100%; border-radius: 5px; background-position: center; background-size: cover; background-repeat: no-repeat;">
-                <div class="profileImage">
-                    <img class="imgcont" src="https://i.pravatar.cc/150?img=3" alt="Profile Photo">
-                    <div class="namecontainer">
+                style=" border: 0px solid transparent; background-image: url('#') ; width: 100%; height: 100%; border-radius: 5px; background-position: center; background-size: cover; background-repeat: no-repeat;">
+                <div class="wrapper" style="display: flex; flex-direction: row;">
+                    <div class="profileImage">
+                        <img class="imgcont" src="https://i.pravatar.cc/150?img=3" alt="Profile Photo">
+                    </div>
+                    <div class="namecontainer" style=" margin-top: 12%; margin-left: 5%; font-size:40px;">
                         <h1>CLUB OF KINGS</h1>
                     </div>
                 </div>
             </div>
-
-
         </div>
 
         <!-- Other Cards -->
         <div class="gridWrap_3tq">
 
             <div class="blockUnit_d8r">
-                <h2>👥 Connections</h2>
+                <h2>👥 CLUB MEMBERS</h2>
                 <ul>
                     <li>Ravi Sharma</li>
                     <li>Anjali Verma</li>
@@ -246,7 +264,7 @@
             </div>
 
             <div class="blockUnit_d8r">
-                <h2>🏆 Awards</h2>
+                <h2>🏆 CLUB EVENTS</h2>
                 <ul>
                     <li>Best Coder - TechFest 2024</li>
                     <li>Top Performer - Hackathon 2023</li>
@@ -255,7 +273,7 @@
             </div>
 
             <div class="blockUnit_d8r">
-                <h2>🎯 Clubs</h2>
+                <h2>🎯 VOLUNTEERS</h2>
                 <ul>
                     <li>Code Warriors</li>
                     <li>Design Minds</li>
