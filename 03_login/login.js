@@ -2,6 +2,22 @@
 import { auth } from '/04_backend/backend.js'; // path adjust karo apne hisaab se
 import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
 
+
+// Dark mode toggle
+window.toggleMode = function () {
+    const body = document.body;
+    const toggleButton = document.querySelector(".toggle-mode");
+
+    body.classList.toggle("dark-mode");
+
+    if (body.classList.contains("dark-mode")) {
+        toggleButton.textContent = "☀️ Light Mode";
+    } else {
+        toggleButton.textContent = "🌙 Dark Mode";
+    }
+};
+
+
 window.validator = function () {
     const email = document.getElementById("n1").value.trim();
     const password = document.getElementById("n2").value.trim();
@@ -12,6 +28,7 @@ window.validator = function () {
     // Clear old errors
     userError.textContent = "";
     passError.textContent = "";
+
 
     let valid = true;
 

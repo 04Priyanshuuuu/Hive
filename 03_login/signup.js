@@ -12,6 +12,21 @@ import {
     where
 } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore.js";
 
+
+// Dark mode toggle
+window.toggleMode = function () {
+    const body = document.body;
+    const toggleButton = document.querySelector(".toggle-mode");
+
+    body.classList.toggle("dark-mode");
+
+    if (body.classList.contains("dark-mode")) {
+        toggleButton.textContent = "☀️ Light Mode";
+    } else {
+        toggleButton.textContent = "🌙 Dark Mode";
+    }
+};
+
 document.querySelector("form").addEventListener("submit", async function (e) {
     e.preventDefault();
 

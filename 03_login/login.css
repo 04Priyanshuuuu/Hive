@@ -91,19 +91,17 @@ input[type="password"] {
 
 /* Dark Mode Styling */
 body.dark-mode {
-    background-color: #222;
+    background-color: #121212;
     color: white;
+}
+
+body.dark-mode input,
+body.dark-mode button {
+    background-color: #1e1e1e;
+    color: white;
+    border: 1px solid #555;
 }
 
 body.dark-mode .login-container {
-    background-color: rgba(40, 40, 40, 0.95);
-    color: white;
-}
-
-body.dark-mode .btn {
-    background-color: #444;
-}
-
-body.dark-mode .btn:hover {
-    background-color: #1e7f1f;
+    background-color: #1a1a1a;
 }
