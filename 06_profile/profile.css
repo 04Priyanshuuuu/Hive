@@ -11,15 +11,7 @@ body {
     color: #f0f0f0;
 }
 
-/* Placeholder sections */
-.nav-placeholder,
-.footer-placeholder {
-    background-color: #1a1a1a;
-    text-align: center;
-    padding: 1rem;
-    color: #999;
-    font-style: italic;
-}
+
 
 /* Container */
 .container {

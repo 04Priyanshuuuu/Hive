@@ -333,56 +333,50 @@ body {
 
 
 /*video section */
-.video-section {
+.video-dark-section {
     padding: 60px 20px;
-    max-width: 1200px;
-    margin: auto;
+    background-color: #0d0d0d;
+    /* Pure black */
     text-align: center;
 }
 
-.header h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.tags {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+.video-heading {
+    color: #ffffff;
+    font-size: 2.8rem;
     margin-bottom: 40px;
+    font-weight: 700;
+    font-family: 'Arial', sans-serif;
 }
 
-.tags span {
-    background: #000;
-    color: #fff;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 14px;
-    cursor: default;
-}
-
-.cards {
+.video-cards-dark {
     display: flex;
-    flex-direction: row;
-    gap: 20px;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
-.card {
-    background: white;
-    border-radius: 10px;
+.video-card-dark {
+    width: 300px;
+    height: 180px;
+    border-radius: 14px;
     overflow: hidden;
-    width: 100%;
-    max-width: 360px;
-    text-align: left;
+    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.card video {
+.video-card-dark:hover {
+    transform: scale(1.03);
+}
+
+.video-card-dark video {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
     display: block;
 }
+
+
 
 
 
