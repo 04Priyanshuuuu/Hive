@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Login Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url('imglogin.jpg');
+            background-image: url('login2img.webp');
+
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -19,7 +21,8 @@
         }
 
         .login-container {
-            background-color: rgba(173, 216, 230, 0.95);
+            background-color: rgba(253, 246, 227, 0.6);
+            /* 0.6 = 60% opaque */
             padding: 20px 40px 15px 20px;
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
@@ -27,6 +30,7 @@
             width: 100%;
             position: relative;
         }
+
 
         h2 {
             margin-bottom: 20px;
@@ -109,12 +113,13 @@
         body.dark-mode .btn:hover {
             background-color: #1e7f1f;
         }
-
     </style>
 </head>
+
 <body>
 
     <div class="login-container">
+
         <div class="toggle-mode" onclick="toggleMode()">🌙 Dark Mode</div>
         <h2><u>Login</u></h2>
         <form name="myform" onsubmit="return validator()">
@@ -166,7 +171,7 @@
                 valid = false;
             }
 
-            
+
             if (valid) {
                 alert("Login successful!");
             }
@@ -180,4 +185,5 @@
     </script>
 
 </body>
+
 </html>
