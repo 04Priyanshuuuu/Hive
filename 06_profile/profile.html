@@ -31,54 +31,121 @@
                 <li><a href="/06_profile/profile.html">Profile</a></li>
             </ul>
 
-            <div class="controls">
-                <input type="text" placeholder="Search ..." class="search-bar" />
-                <button id="dark-mode-toggle">🌙</button>
+            <div class="profile">
+                <div class="controls">
+                    <input type="text" placeholder="Search ..." class="search-bar" />
+
+                    <button id="search-bar">🔍</button>
+                </div>
+
+
+                <button id="dark-mode">🌙</button>
+                <img src="userImg.png" alt="Profile" id="profilePic" />
+                <div id="profileMenu" class="profile-menu">
+                    <ul>
+                        <li><a href="#profile">View Profile</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="login2.html">login</a></li>
+                        <li><a href="sign2.html">SignUp</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </div>
             </div>
-
-
         </div>
     </header>
 
     <main class="container">
         <!-- Div 1 -->
         <section class="profile-top">
-            <div class="dp-section">
-                <div class="dp">DP</div>
-                <div class="info">
-                    <h2>Name</h2>
-                    <p>Branch</p>
-                    <p>Roll No</p>
+            <div class="coverPic">
+                <div class="dpcontainer">
+                    <div class="dp"><img class="dpimage" src="../assets/sigma.jpg"></img></div>
+                    <div class="info">
+                        <div class="nameContainer">
+                            <span class="name"><b>Name:</b></span>
+                            <input class="input" type="text" readonly placeholder="Harshit Pandey">
+                        </div>
+
+                        <div class="nameContainer">
+                            <span class="name"><b>Branch:</b></span>
+                            <input class="inputBranch" type="text" readonly placeholder="Information Technology">
+                        </div>
+                        <div class="nameContainer">
+                            <span class="name"><b>Roll No:</b></span>
+                            <input class="inputRoll" type="number" readonly placeholder="2024071130">
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="cover-pic">Cover Pic</div>
-        </section>
-
-        <!-- Div 2 -->
-        <section class="profile-main">
-            <aside class="contact">
-                <h3>Contact</h3>
-                <ul>
-                    <li>Email</li>
-                    <li>Github</li>
-                    <li>LinkedIn</li>
-                    <li>LeetCode</li>
-                    <li>Codeforces</li>
-                    <li>Number</li>
-                </ul>
-            </aside>
-
-            <div class="main-content">
-                <div class="box">Connection Hub</div>
-                <div class="box">Awards & Achievements</div>
-                <div class="box">Clubs Joined</div>
-                <div class="box">Baaki dikhna chahiye</div>
-            </div>
         </section>
     </main>
 
-    <!-- Footer Space -->
 
+
+    <div class="boxContainer">
+
+
+        <div class="leftBlock_92x">
+            </br>
+            <h2>📇 Contacts</h2>
+            </br>
+            </br>
+            </br>
+            <ul>
+                <li>Email: you@example.com</li>
+                </br>
+                </br>
+                <li>Phone: +91-9876543210</li>
+                </br>
+                </br>
+                <li>LinkedIn: linkedin.com/in/yourname</li>
+                </br>
+                </br>
+                <li>GitHub: github.com/yourname</li>
+            </ul>
+        </div>
+
+        <!-- Main Section -->
+        <div class="mainZone_k4p">
+
+            <div class="gridWrap_3tq">
+
+                <!-- Connections -->
+                <div class="blockUnit_d8r">
+                    <h2>👥 Connections</h2>
+                    <ul>
+                        <li>Ravi Sharma</li>
+                        <li>Anjali Verma</li>
+                        <li>Neha Joshi</li>
+                        <li>Aryan Mehta</li>
+                    </ul>
+                </div>
+
+                <!-- Awards -->
+                <div class="blockUnit_d8r">
+                    <h2>🏆 Awards</h2>
+                    <ul>
+                        <li>Best Coder - TechFest 2024</li>
+                        <li>Top Performer - Hackathon 2023</li>
+                        <li>Leadership Award - Club Alpha</li>
+                    </ul>
+                </div>
+
+                <!-- Clubs -->
+                <div class="blockUnit_d8r">
+                    <h2>🎯 Clubs</h2>
+                    <ul>
+                        <li>Code Warriors</li>
+                        <li>Design Minds</li>
+                        <li>Robotics Club</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer Space -->
     <footer>
         <h1 class="footer-txt">About Us</h1>
         <p class="footer-txt1">
@@ -144,7 +211,6 @@
             <p>Made with ❤️ by Priyanshu And Team</p>
         </div>
     </footer>
-
 </body>
 
 </html>
